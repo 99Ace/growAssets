@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hell-O world</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <div id="main-menu" class="row text-light">
+        <!-- Sweet Home -->
+        <div id="menu-sweet-home" class="col-6">
+            <a href="{% url 'sweethome' %}" class="text-light text-decoration-none">
+            <div class="">
+                <h1><i class="fas fa-house-user"></i></h1>
+                <h5>SWEET HOME</h5>
+                <p  class="fst-italic">"where we save for our fütüre"</p>
+            </div> 
+            </a>
+        </div>
+        <!-- Mikar -->
+        <div id="menu-mikar" class="col-6">
+            <a href="{% url 'mikar9' %}" class="text-light text-decoration-none p-2">
+            <div class="">
+                <h1><i class="fas fa-car-side"></i></h1>
+                <h5>MIKAR *9 </h5>
+                <p  class="fst-italic">"where cars sells on its own"</p>
+            </div> 
+            </a>
+        </div>
+        <div class="col-6">PHOTOS</div>
+        <!-- Happy Coders -->
+        <div id="menu-happycoders" class="col-6">
+            <a href="{% url 'happyCoders' %}" class="text-light text-decoration-none">
+            <div class="">
+                <h1><i class="fas fa-laptop-code"></i></h1>
+                <h5>HAPPY CODERS SG </h5>
+                <p  class="fst-italic">"where kids had fun learning!"</p>
+            </div> 
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,54 @@
+main {
+    height : 100vh;
+    background-color: gainsboro;
+    background-image: url('../images/bg-fishes.png');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+}
+#main-menu {
+    width : 300px;
+    height: 550px;
+    margin: auto;
+    border: 5px solid rgb(58, 51, 51);
+    background-color: rgba(0, 0, 0, 0.63);
+
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+#main-menu>div{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+#main-menu>div>a:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+#main-menu>div:hover {
+    border: white 2px solid;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#menu-sweet-home:hover {
+    background-image: url('../images/ling-and-en.png');
+    background-position: center;
+    background-size: cover;
+}
+#menu-mikar:hover {
+    background-image: url('../images/Z4.png');
+    background-position: center;
+    background-size: cover;
+}
+#menu-happycoders:hover {
+    background-image: url('../images/happybot-white-original.png'),url('../images/pic-field.png'),url('../images/sky-blue.png');
+    background-position: center;
+    background-size: contain,cover,cover;
+}
+@media screen and (min-width : 768px) {
+    #main-menu {
+        width: 50%;
+    }
+}
