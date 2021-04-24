@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Dependencies app
     'crispy_forms',
     'cloudinary',
+    'widget_tweaks',
     # Own apps
     'mikar9',
 ]
@@ -138,3 +139,5 @@ CLOUDINARY = {
     'api_key': os.environ.get("CLOUDINARY_API_KEY"),
     'api_secret': os.environ.get("CLOUDINARY_API_SECRET"),
 }
+CLOUD_NAME = os.environ.get('CLOUD_NAME')
+UPLOAD_PRESET = os.environ.get('UPLOAD_PRESET')

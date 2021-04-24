@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
+{%load crispy_forms_tags %}
+
 {% block content %}
 <section>
-    <form method="POST">
-         {% csrf_token %}
-         {{ form.as_p }}
-         <input class="btn btn-primary" type="submit" >
-    </form>
+    <div class="row">
+        <div class="col-md-6 col-12 p-5">
+            <div id="form">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy}}
+                    <input class="btn btn-primary mt-3" type="submit">
+                </form>
+            </div>
+            <div class="status">
+                <h2>Status</h2>
+                <span class="status_value">Idle</span>
+            </div>
+
+            <div class="uploaded_info_holder">
+
+            </div>
+        </div>
+    </div>
+
 </section>
 {% endblock %}

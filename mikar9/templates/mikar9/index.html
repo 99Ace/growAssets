@@ -3,5 +3,9 @@
 <section>
     <h1>MIKAR *9 PTE LTD</h1>
     <a href="{% url 'm9_create' %}"  class="fst-italic">Add  Expense</a>
+
+    {% for item in data %}
+        {{ item.invoice_reference }}
+    {% endfor %}
 </section>
 {% endblock %}
